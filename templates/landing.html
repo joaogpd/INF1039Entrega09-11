@@ -23,13 +23,12 @@
         <!--Checks if variable result is defined or not. If not defined, nothing has been sent
         through the input, so it doesn't try to render in anything-->
         {% if result is defined %}
-            {% for n in range(1) %}
-                <p>Horario de funcionamento: {{ result["horario"] }}</p>
-                <p>Faixa de valores: {{ result["faixa-valores"] }}</p>
-                <a href="/{{ result["nome"] }}/"><button>Ir para o {{ result["nome"] }}</button></a>
-            </div>
-            {% endfor %}
-            <br><br>
+            
+              <p>Horario de funcionamento: {{ result["horario"] }}</p>
+              <p>Faixa de valores: {{ result["faixa-valores"] }}</p>
+              <a href="/{{ result["nome"] }}/"><button>Ir para o {{ result["nome"] }}</button></a>
+        </div>
+        <br><br>
         {% endif %}
         <a href="/"><button>Refresh</button></a>
     </div>
